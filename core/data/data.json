@@ -1,0 +1,28 @@
+{
+    "url": {
+        "home_page": "https://ultimateqa.com/automation/",
+        "x_url": "https://twitter.com/Nikolay_A00"
+    },
+    
+        "account":{
+            "first_name": "Tarik",
+            "last_name": "Zrnic",
+            "name": "Tarik Zrnic",
+            "username":"coro123",
+            "email": "corozrno@gmail.com",
+            "password":"corozrnozrnocoro123",
+            "phone_number": "+387 62 123 456"
+        },
+        "verification_message": {
+            "button_success_message": "Button success",
+            "article_header": "Mastering Playwright: How to Create Effective Page Objects",
+            "form_message": "My name is Walter Hartwell White. I live at 308 Negra Arroyo Lane, Albuquerque, New Mexico, 87104. This is my confession."
+        },
+
+        "search_query": {
+            "java_course_search": "TestProject Java SDK Tutorial"
+        }
+    
+}
+
+
