@@ -8,11 +8,16 @@ const dataFilePath = path.resolve(__dirname, "../data/data.json");
 const testData = JSON.parse(readFileSync(dataFilePath, "utf8"));
 
 export class LogoutPage extends BasePage{
-    private dropDownMenu = By.className('fa fa-caret-down')
-    private signOutButton = By.xpath('//a[@href="/users/sign_out"]')
+    private dropDownMenu = By.className('fa fa-caret-down');
+    private signOutButton = By.xpath('//a[@href="/users/sign_out"]');
+    private myAccountButton = By.xpath('//a[@href="/account"]');
 
     constructor(driver: WebDriver) {
         super(driver);
+    }
+
+    async clickOnMyAcc() {
+        await this.findElementAndClick(this.myAccountButton);
     }
 
     async ClickOnDropDownMenu() {

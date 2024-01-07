@@ -10,7 +10,7 @@ export class BlogPage extends BasePage {
 
     private olderEntriesButton = By.xpath('//a[@href="https://ultimateqa.com/blog/page/2/?et_blog"]');
     private articleButton = By.xpath('//h2[@class="entry-title"]//a[@href="https://ultimateqa.com/mastering-playwright-how-to-create-effective-page-objects/"]');
-
+    private articleHeader = By.xpath('//h1');
 
 
     constructor(driver: WebDriver) {
@@ -24,6 +24,10 @@ export class BlogPage extends BasePage {
 
     async clickOnArticle() {
         await this.findElementAndClick(this.articleButton);
+    }
+
+    async assertArticle() {
+        await this.checkMatchingElements(this.articleHeader, testData.verification_message.article_header);
     }
 
 

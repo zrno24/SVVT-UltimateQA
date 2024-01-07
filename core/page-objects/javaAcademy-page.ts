@@ -29,12 +29,26 @@ async clickOnFirstNameInput() {
     await this.findElementAndClick(this.firstNameInput);
 }
 
+async clickOnLastNameInput() {
+    await this.findElementAndClick(this.lastNameInput);
+}
+
 async InputLastName(){
     await this.fillInputField(this.lastNameInput,testData.account.last_name);
 }
+
+async clickOnEmailInput() {
+    await this.findElementAndClick(this.emailInput);
+}
+
 async InputEmail(){
     await this.fillInputField(this.emailInput,testData.account.email);
 }
+
+async clickOnPhoneInput() {
+    await this.findElementAndClick(this.phoneNumberInput);
+}
+
 async InputPhoneNumber(){
     await this.fillInputField(this.phoneNumberInput,testData.account.phone_number);
 }
