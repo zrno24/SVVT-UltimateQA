@@ -1,4 +1,5 @@
 import { By, WebDriver, WebElement, until } from "selenium-webdriver";
+const { Key } = require('selenium-webdriver');
 
 
 export default class BasePage {
@@ -8,21 +9,31 @@ export default class BasePage {
     constructor(driver: WebDriver) {
         this.driver = driver;
     }
-    async getTitle(){
+
+    async getTitle() {
         return await this.driver.getTitle();
     }
-    async checkMatchingElements(selector: By, matchingItem: string){
+    async checkMatchingElements(selector: By, matchingItem: string) {
         const element = await this.findElement(selector);
         const elementText = await element.getText();
         expect(elementText).toMatch(matchingItem);
     }
-    async checkTitle(page: { getTitle: () => Promise<string>}, page_title: string){
+    async checkTitle(page: { getTitle: () => Promise<string>}, page_title: string) {
         let title = await page.getTitle();
         expect(title).toMatch(page_title);
     }  
     async waitAndClick(elementLocator, timeout) {
         await this.driver.wait(
             until.elementLocated(elementLocator), timeout).click();
+    }
+
+    async clearInput(selector: By) {
+        const element = await this.findElement(selector);
+        await element.sendKeys(Key.chord(Key.CONTROL, 'a'), Key.BACK_SPACE);
+    }
+
+    async pressEnterOnElement(element: WebElement) {
+        await element.sendKeys(Key.ENTER);
     }
    
     async waitForElement(elementLocator, timeout) {
@@ -37,7 +48,7 @@ export default class BasePage {
     async scrollToElement(element: WebElement): Promise<void> {
         await this.driver.executeScript("arguments[0].scrollIntoView(true);", element);
     }
-    async findElement(selector: By){
+    async findElement(selector: By) {
         return await this.driver.findElement(selector)
     }
     async findElementAndClick(selector:By){
