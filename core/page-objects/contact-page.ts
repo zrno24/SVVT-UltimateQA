@@ -57,6 +57,6 @@ export class ContactPage extends BasePage {
     }
 
     async checkIfMessageSent() {
-        await this.checkMatchingElements(this.messageSent, "Thanks for contacting us");
+        await this.checkMatchingElements(this.messageSent, testData.verification_message.contact_page_message);
     }
 }

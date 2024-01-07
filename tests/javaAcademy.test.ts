@@ -38,6 +38,7 @@ test("Java Academy test", async () => {
     await javaAcademyPage.clickOnFirstNameInput();
     await javaAcademyPage.InputFirstName();
     await javaAcademyPage.clickOnLastNameInput();
+    await javaAcademyPage.InputLastName
     await javaAcademyPage.clickOnEmailInput();
     await javaAcademyPage.InputEmail();
     await javaAcademyPage.clickOnPhoneInput();

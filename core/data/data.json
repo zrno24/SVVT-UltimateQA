@@ -13,6 +13,8 @@
         "account":{
             "first_name": "Tarik",
             "last_name": "Zrnic",
+            "new_first_name": "Jesse",
+            "new_last_name": "Pinkman",
             "name": "Tarik Zrnic",
             "username":"coro123",
             "email": "corozrno@gmail.com",
@@ -22,11 +24,13 @@
         "verification_message": {
             "button_success_message": "Button success",
             "article_header": "Mastering Playwright: How to Create Effective Page Objects",
-            "form_message": "My name is Walter Hartwell White. I live at 308 Negra Arroyo Lane, Albuquerque, New Mexico, 87104. This is my confession."
+            "form_message": "My name is Walter Hartwell White. I live at 308 Negra Arroyo Lane, Albuquerque, New Mexico, 87104. This is my confession.",
+            "profile_change_message": "Your profile was successfully updated.",
+            "contact_page_message": "Thanks for contacting us"
         },
 
         "search_query": {
-            "java_course_search": "TestProject Java SDK Tutorial"
+            "java_course_search": "Coding and testing an authentication API [NodeJs + Cypress]"
         }
     
 }
