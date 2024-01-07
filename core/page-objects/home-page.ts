@@ -1,6 +1,10 @@
 import { By, WebDriver, until } from "selenium-webdriver";
 import BasePage from "./base-page";
+import { readFileSync } from "fs";
+import * as path from "path";
 
+const dataFilePath = path.resolve(__dirname, "../data/data.json");
+const testData = JSON.parse(readFileSync(dataFilePath, "utf8"));
 
 export class HomePage extends BasePage {
     private learningElement = By.xpath('//ul[@id="menu-main-menu"]//li[@id="menu-item-218225"]//a[@href="#"]');
@@ -25,7 +29,7 @@ export class HomePage extends BasePage {
         await this.findElementAndClick(this.blogButton);
     }
 
-    async scrollAndClickOnContact() {
+    async scrollAndClickOnContactUsButton() {
         this.scrollToElement(this.contactUsButton).click();
     }
 

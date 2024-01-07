@@ -1,7 +1,13 @@
 {
     "url": {
         "home_page": "https://ultimateqa.com/automation/",
-        "x_url": "https://twitter.com/Nikolay_A00"
+        "x_url": "https://twitter.com/Nikolay_A00",
+        "contact_page_url": "https://ultimateqa.com/contact/",
+        "automation_page_url": "https://ultimateqa.com/automation/",
+        "login_page_url": "https://courses.ultimateqa.com/users/sign_in",
+        "registration_page_url": "https://courses.ultimateqa.com/users/sign_up",
+        "formFill_test_page_url": "https://ultimateqa.com/filling-out-forms/",
+        "blog_page_url": "https://ultimateqa.com/blog/"
     },
     
         "account":{

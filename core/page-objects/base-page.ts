@@ -26,6 +26,15 @@ export default class BasePage {
         await this.driver.wait(
             until.elementLocated(elementLocator), timeout).click();
     }
+
+    async clearInput(selector: By) {
+        const element = await this.findElement(selector);
+        await element.sendKeys(Key.chord(Key.CONTROL, 'a'), Key.BACK_SPACE);
+    }
+
+    async pressEnterOnElement(element: WebElement) {
+        await element.sendKeys(Key.ENTER);
+    }
    
     async waitForElement(elementLocator, timeout) {
         return this.driver.wait(until.elementLocated(elementLocator), timeout);
