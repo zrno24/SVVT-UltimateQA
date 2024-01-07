@@ -16,10 +16,31 @@ private passwordInput=By.xpath('//input[@id="user[password]"]');
 private tickPrivacyPolicy=By.xpath('//input[@id="user[terms]"]');
 private signUpButton=By.className('button button-primary g-recaptcha');
 
+constructor(driver: WebDriver) {
+    super(driver);
+}
+
 
 async ClickOnNewAccLink(){
     await this.findElementAndClick(this.createNewAccLink);
 }
+
+async clickOnFirstName() {
+    await this.findElementAndClick(this.firstNameInput);
+}
+
+async clickOnLastName() {
+    await this.findElementAndClick(this.lastNameInput);
+}
+
+async clickOnEmail() {
+    await this.findElementAndClick(this.emailInput);
+}
+
+async clickOnPassword() {
+    await this.findElementAndClick(this.passwordInput);
+}
+
 async InputFirstName(){
     await this.fillInputField(this.firstNameInput, testData.account.first_name)
 }
@@ -38,4 +59,5 @@ async TickPrivacyPolicy(){
 async ClickOnSignUpButton(){
     await this.findElementAndClick(this.signUpButton);
 }
+
 }

@@ -11,6 +11,9 @@ export class LogoutPage extends BasePage{
     private dropDownMenu = By.className('fa fa-caret-down')
     private signOutButton = By.xpath('//a[@href="/users/sign_out"]')
 
+    constructor(driver: WebDriver) {
+        super(driver);
+    }
 
     async ClickOnDropDownMenu() {
         await this.findElementAndClick(this.dropDownMenu);

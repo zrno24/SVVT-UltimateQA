@@ -1,4 +1,4 @@
-import { By, WebDriver, WebElement, until } from "selenium-webdriver";
+import { By, WebDriver, WebElement, until, get } from "selenium-webdriver";
 const { Key } = require('selenium-webdriver');
 
 

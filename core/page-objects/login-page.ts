@@ -12,16 +12,24 @@ export class LoginPage extends BasePage{
 private emailInput = By.xpath('//input[@id="user[email]"]');
 private passwordInput = By.xpath('//input[@id="user[password]"]');
 private signInButton = By.className('button button-primary g-recaptcha');
+private createNewAccButton = By.xpath('//a[@href="/users/sign_up"]');
 
-
-
-    async hoverLearningElement() {
-        await this.hoverElement(this.learningElement);
-    }
+constructor(driver: WebDriver) {
+    super(driver);
+}
 
     async InputEmail(){
         await this.fillInputField(this.emailInput,testData.account.email);
     }
+
+    async clickOnEmailInput (){
+        await this.findElementAndClick(this.emailInput);
+    }
+
+    async clickOnPasswordInput (){
+        await this.findElementAndClick(this.passwordInput);
+    }
+
     async InputPassword(){
         await this.fillInputField(this.passwordInput,testData.account.password);
     }
@@ -29,4 +37,7 @@ private signInButton = By.className('button button-primary g-recaptcha');
         await this.findElementAndClick(this.signInButton)
     }
     
+    async clickOnCreateAccButton() {
+        await this.findElementAndClick(this.createNewAccButton);
+    }
 }

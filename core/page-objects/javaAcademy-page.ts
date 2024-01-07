@@ -24,6 +24,11 @@ async ClickOnFirstEarlyAccessButton() {
 async InputFirstName(){
     await this.fillInputField(this.firstNameInput, testData.account.first_name);
 }
+
+async clickOnFirstNameInput() {
+    await this.findElementAndClick(this.firstNameInput);
+}
+
 async InputLastName(){
     await this.fillInputField(this.lastNameInput,testData.account.last_name);
 }
