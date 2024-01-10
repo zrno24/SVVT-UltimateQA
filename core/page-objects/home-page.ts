@@ -44,7 +44,9 @@ export class HomePage extends BasePage {
     }
 
     async scrollAndClickOnContactUsButton() {
-        this.scrollToElement(this.contactUsButton).click();
+        this.scrollToElement(this.contactUsButton);
+        this.findElementAndClick(this.contactUsButton);
+
     }
 
 
