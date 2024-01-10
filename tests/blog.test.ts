@@ -34,7 +34,9 @@ test("Blog test", async () => {
     await homePage.goToHomePage();
     await homePage.clickOnBlogButton();
     await blogPage.scrollAndClickOnOlderEntries();
-},500000);
+    await blogPage.clickOnArticle();
+    await blogPage.assertArticle();
+},50000);
 
 
 afterAll(async () => {
